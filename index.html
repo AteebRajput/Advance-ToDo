@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance ToDo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <nav>
+        <h1>ToDo App</h1>
+    </nav>
+    <main>
+        <form class="add" id="form">
+            <div class="heading" id="heading">
+                <h2>Add You task</h2>
+            </div>
+            <div class="form-control">
+                <label for="task-input">Task</label>
+                <input type="text" name="task" id="task-input" placeholder="Please enter your task">
+                <label for="date">Select Date</label>
+                <input type="date" name="date" id="date" placeholder="select date">
+                
+                <div class="radio-container">
+                    <label for="priority-level"><h4>Priority:</h4></label>
+                    <div class="pane">
+                        <label class="label">
+                            <span>High</span>
+                            <input value="high" id="high" class="input" name="priority" type="radio">
+                        </label>
+                        <label class="label">
+                            <span>Low</span>
+                            <input value="low" id="low" class="input" checked="checked" name="priority" type="radio">
+                        </label>
+                        <label class="label">
+                            <span>Avg</span>
+                            <input value="average" id="average" class="input" name="priority" type="radio">
+                        </label>
+                        <span class="selection"></span>
+                    </div>
+                </div>
+                
+                <div class="completed-container">
+                    <h4>Completed:</h4>
+                    <label class="radio-button">
+                        
+                        <input type="radio" name="completed" value="true">
+                        <span class="radio">True</span>
+        
+                        <input type="radio" name="completed" value="false">
+                        <span class="radio">False</span>
+                      </label>
+
+                      
+                </div>
+                  
+            </div>
+            <div class="controls">
+                <input type="submit" data-type="add" class="btn form-add-btn" value="Add">
+                <input type="submit" data-type="update" class="btn form-update-btn" value="Update">
+                <input type="reset" class="btn form-cancel-btn" value="Cancel">
+            </div>
+        </form>
+        <div class="tasks-container">
+            <div class="head">
+                <h2>All Tasks</h2>
+            </div>
+<div class="show">
+    <div class="search">
+        <input placeholder="Search..." type="text" name="search" id="search">
+        <button id="submit-btn" type="submit">Go</button>
+    </div>
+    <div class="pending">
+        <label class="material-checkbox">
+            <input type="checkbox" name="pending-task" id="pending">
+            <span class="checkmark"></span>
+            <p class="check-text">Show All Pending Tasks</p>
+          </label>
+    </div>
+</div>
+        
+            <ul class="task-list" id="task-list">
+
+
+
+            </ul>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
